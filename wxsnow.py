@@ -87,8 +87,10 @@ class Flake(object):
         x, y = self.position
         dc.DrawBitmap(bitmap, x - w / 2, y - h / 2)
 
+
 def cmp(a, b):
-    return (a > b) - (a < b) 
+    return (a > b) - (a < b)
+
 
 class CollisionDetector(object):
     @staticmethod
@@ -102,8 +104,10 @@ class CollisionDetector(object):
     def __init__(self, objects):
         self.objects = list(objects)
         # sorted(x, key=functools.cmp_to_key(customsort))
-        self.x_list = sorted(self.objects, key=functools.cmp_to_key(CollisionDetector.cmp_x))
-        self.y_list = sorted(self.objects, key=functools.cmp_to_key(CollisionDetector.cmp_y))
+        self.x_list = sorted(
+            self.objects, key=functools.cmp_to_key(CollisionDetector.cmp_x))
+        self.y_list = sorted(
+            self.objects, key=functools.cmp_to_key(CollisionDetector.cmp_y))
 
     def get_collisions(self):
         self.x_list.sort(key=functools.cmp_to_key(CollisionDetector.cmp_x))
