@@ -8,3 +8,20 @@ wxSnow is a festive application that draws snowflakes falling on your desktop, b
 - Make snowflakes rotate or not rotate. (Rotation takes more CPU power.)
 - System tray icon to change settings or exit the application.
 
+### Setting up
+
+with pipev
+
+```shell
+pipev install && pipev shell
+```
+
+Or
+
+```shell
+python -mpip install -r requirements.txt
+```
+
+```shell
+python wxsnow.py
+```
